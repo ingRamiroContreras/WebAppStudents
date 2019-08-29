@@ -1,0 +1,31 @@
+<mat-card>
+    <mat-card-title>Student List</mat-card-title>
+    <mat-card-content>
+        <mat-list>
+            <mat-list-item *ngFor="let student of students">
+                 <h4 mat-line>
+                    <b>Code:</b> {{student.idStudent}}
+                </h4>
+                <h4 mat-line>
+                    <b>Name:</b> {{student.nombre}}
+                </h4>
+                <h4 mat-line>
+                    <b>Last Name:</b> {{student.apellido}}
+                </h4>
+                <h4 mat-line>
+                    <b>Age:</b> {{student.edad}}
+                </h4>
+                <h4 mat-line>
+
+                    <button color="primary" [routerLink]="['/student-edit', student.idStudent]" type="button">Editar</button>
+                </h4>
+                
+
+                
+            </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+
+    <button mat-fab color="primary" [routerLink]="['/student-add']">Add</button>
+</mat-card>
+
